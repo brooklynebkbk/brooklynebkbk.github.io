@@ -1,4 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Datadog Websites Team Homepage Redesign"
-theme = "datadog"
+
+
