@@ -1,4 +1,9 @@
-
-  {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
-          {{ .Title }}
-  {{ end }}
+<div class="sidebar">
+  <div class="datadog-logo"></div>
+  <div class="sidebar-navigation">
+    {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
+            {{ .Title }}
+    {{ end }}
+  </div>
+  <p class="login">Login</p>
+</div>
