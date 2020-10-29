@@ -1,9 +1,15 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: red;
+$black: #000000;
+$dd-purple: #724EEF;
+$purple: #2B2AA7;
+$green: #14D071;
+$salmon: #FF635A;
+$light-gray: #F5F5F5;
+$white:  #FFFFFF;
 
 @font-face {
   font-family: 'National';
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
   src: url('../fonts/national/national-test-medium.woff') format('woff');
 }
@@ -11,43 +17,233 @@ $primary-color: red;
 @import "node_modules/bootstrap/scss/bootstrap";
 
 h1 {
-  color: $primary-color;
+  color: $black;
   font-family: 'National', sans-serif;
   font-size: 48px;
   line-height: 50px;
 }
-
+h3 {
+  font-family: 'National', sans-serif;
+  font-size: 26px;
+  line-height: 34px;
+  color: $black;
+}
+h6 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.342857px;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'National', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $black;
+  margin-top: 12%;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  font-family: 'National', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black;
+  list-style-type: none;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+a {
+  font-family: 'National', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
+}
+input {
+  border: 3px solid $dd-purple;
+  box-sizing: border-box;
+  position: absolute;
+  width: 90%;
+  bottom: 0%;
+  height: 60px;
+  color: $dd-purple;
+  text-transform: uppercase;
+  background-color: white;
+}
+div.container-outer {
+  margin-left: 4vw;
+}
 div.nav {
-  background-color: #724EEF;
+  background-color: $dd-purple;
   position: absolute;
   top: 0;
   left: 0;
-  height: 170vh;
+  height: 280vh;
   min-width: 168px;
 }
+div.pricing {
+  background-color: $light-gray;
+  padding-bottom: 10%;
+}
+div.pricing-infra {
+  position: relative;
+  width: 90%;
+  margin-top: 3%;
+  width: 90%;
+  left: 1%;
+  h6, a {
+    color: $purple;
+  }
+}
+div.pricing-apm {
+  position: relative;
+  width: 90%;
+  margin-top: 3%;
+  width: 90%;
+  left: 1%;
+  h6, a {
+    color: $green;
+  }
+}
+div.pricing-logs {
+  position: relative;
+  width: 90%;
+  margin-top: 3%;
+  width: 90%;
+  left: 1%;
+  h6, a {
+    color: $salmon;
+  }
+}
+div.pricing a {
+  position: absolute;
+  bottom: -16%;
 
-div.container-outer {
-  margin-left: 5vw;
+}
+div.feature {
+  position: relative;
+  top: 2vw;
+  h6.feature-text, h3.feature-text {
+     color: $white;
+     text-align: center;
+  }
+}
+div.feature > div {
+  padding: 0px;
+}
+div.feature > div > div.feature-block {
+  position: relative;
+  height: 100%;
+  margin-left: 1vw;
+  padding-top: 7vw;
+  padding-bottom: 6vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+div.feature-apm {
+  background-color: $green;
+  margin-right: 1vw;
+}
+div.feature-infra {
+  background-color: $purple;
+}
+div.feature-logs {
+  background-color: $salmon;
+  margin-right: 1vw;
+  margin-top: 2vw;
+}
+div.carousel {
+  background-color: $light-gray;
+  margin-top: 2vw;
+  margin-left: 1vw;
+  padding-top: 2vw;
+  padding-left: 2vw;
+  h6, a {
+    color: $dd-purple;
+  }
+  h3 {
+    padding-top: .8vw;
+    padding-bottom: .8vw;
+  }
 }
 
+
+
+
+div.customer-row {
+  position: relative;
+  top: 6vw;
+}
+div.customers-copy {
+  padding-bottom: 26px;
+}
+div.adroll-logo {
+  margin-top: 7%;
+  height: 30px;
+  width: 200px;
+}
+div.customers {
+  margin-left: 1vw;
+  p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  p:nth-child(4) {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  a {
+    color: $dd-purple;
+  }
+}
+div.customers > div.row {
+  margin-right: 1vw;
+  background-color: $light-gray;
+}
+div.customers > div > div{
+}
+div.customer-block {
+  height: 180px;
+  background-color: blue;
+}
+div#peloton {
+  top: -180px;
+}
+div.bottom-six {
+  position: relative;
+  top: -180px;
+}
+#air-bnb {
+  background: #FF5A5F;
+}
+#peloton, #whole-foods {
+  background: $black;
+}
+#evernote{
+  background: #292929;
+}
+#paperduty {
+  background: #5DBD5F;
+}
+#samsung {
+  background: #1428A0;
+}
+#nginx {
+  background: #00AA4E;
+}
+#att {
+  background: #00A8E0;
+}
 footer {
   background: linear-gradient(180deg, #443E48 0%, #110617 100%);
   position: absolute;
-  top: 170vh;
-  width: 100vw;
+  top: 280vh;
+  width: 102vw;
   left: 0;
 }
-
-div.pricing {
-  background-color: gray;
-}
-
-div.feature {
-  background-color: red;
-}
-
-div.customers {
-  background-color: green;
-}
-
 
