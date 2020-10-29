@@ -1,9 +1,13 @@
-<div class="sidebar">
-  <div class="datadog-logo"></div>
-  <div class="sidebar-navigation">
-    {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
-            {{ .Title }}
-    {{ end }}
+
+  <div class="nav flex-column w-100">
+    <div class="datadog-logo"></div>
+    <div class="sidebar-navigation">
+      {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
+          <a class="nav-link" href="/">
+              {{ .Title }}
+          </a>
+      {{ end }}
+    </div>
+    <a class="nav-link" href="/">Login</a>
   </div>
-  <p class="login">Login</p>
-</div>
+

@@ -1,7 +1,53 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: red;
 
-h1 {
-  font: 100% $font-stack;
-  color: $primary-color;
+@font-face {
+  font-family: 'National';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/national/national-test-medium.woff') format('woff');
 }
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+h1 {
+  color: $primary-color;
+  font-family: 'National', sans-serif;
+  font-size: 48px;
+  line-height: 50px;
+}
+
+div.nav {
+  background-color: #724EEF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 170vh;
+  min-width: 168px;
+}
+
+div.container-outer {
+  margin-left: 5vw;
+}
+
+footer {
+  background: linear-gradient(180deg, #443E48 0%, #110617 100%);
+  position: absolute;
+  top: 170vh;
+  width: 100vw;
+  left: 0;
+}
+
+div.pricing {
+  background-color: gray;
+}
+
+div.feature {
+  background-color: red;
+}
+
+div.customers {
+  background-color: green;
+}
+
+
