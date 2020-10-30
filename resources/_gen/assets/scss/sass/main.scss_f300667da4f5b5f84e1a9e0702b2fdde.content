@@ -7170,12 +7170,12 @@ a.text-dark:hover, a.text-dark:focus {
 /*@import "static/fonts/national/national-test-medium";*/
 h1 {
   color: #000000;
-  font-family: 'National', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 48px;
   line-height: 50px; }
 
 h3 {
-  font-family: 'National', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 26px;
   line-height: 34px;
   color: #000000; }
@@ -7187,7 +7187,7 @@ h6 {
   text-transform: uppercase; }
 
 p {
-  font-family: 'National', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -7199,7 +7199,7 @@ ul {
   padding: 0px; }
 
 li {
-  font-family: 'National', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -7208,7 +7208,7 @@ li {
   padding: 0px; }
 
 a {
-  font-family: 'National', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 19px;
   text-decoration: underline; }
@@ -7220,7 +7220,7 @@ img {
 
 div.container-outer {
   margin-left: 4vw;
-  margin-top: 3vw; }
+  margin-top: 2vw; }
 
 div.nav {
   background-color: #724EEF;
@@ -7232,24 +7232,50 @@ div.nav {
 
 div.sidebar-navigation {
   margin-left: 22px;
-  margin-top: 50px; }
-  div.sidebar-navigation a {
-    margin-top: 8px;
-    text-decoration: none;
-    font-family: 'National', sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-    color: #FFFFFF; }
+  margin-top: 56px; }
+  div.sidebar-navigation div.link-containers {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 8px;
+    position: relative;
+    height: 40px; }
+    div.sidebar-navigation div.link-containers a {
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      line-height: 22px;
+      color: #FFFFFF;
+      display: block;
+      position: absolute; }
+      div.sidebar-navigation div.link-containers a div.underline {
+        height: 2px;
+        bottom: -2px;
+        position: relative;
+        width: 0%;
+        background-color: #FFFFFF; }
+      div.sidebar-navigation div.link-containers a:hover div.underline {
+        animation: animate-underline 1 .3s reverse forwards ease-in-out; }
 
-a.login {
+div.nav-link {
   margin-top: 20px;
   margin-left: 22px;
-  text-decoration: none;
-  font-family: 'National', sans-serif;
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 300;
-  color: #FFFFFF; }
+  position: relative; }
+  div.nav-link a.login {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #FFFFFF;
+    position: absolute; }
+    div.nav-link a.login div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 0%;
+      background-color: #FFFFFF; }
+    div.nav-link a.login:hover div.underline {
+      animation: animate-underline 1 .3s reverse forwards ease-in-out; }
 
 div.datadog-logo {
   position: relative;
@@ -7273,10 +7299,20 @@ div.header input {
   color: #724EEF;
   text-transform: uppercase;
   background-color: white; }
+  div.header input:hover {
+    background-color: #724EEF;
+    color: #FFFFFF;
+    transition: .2s; }
 
 div.pricing {
   background-color: #F5F5F5;
   padding-bottom: 10%; }
+
+@keyframes animate-underline {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
 
 div.pricing-infra {
   position: relative;
@@ -7284,8 +7320,18 @@ div.pricing-infra {
   margin-top: 3%;
   width: 90%;
   left: 1%; }
-  div.pricing-infra h6, div.pricing-infra a {
+  div.pricing-infra h6 {
     color: #2B2AA7; }
+  div.pricing-infra a {
+    color: #2B2AA7; }
+    div.pricing-infra a div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 100%;
+      background-color: #2B2AA7; }
+    div.pricing-infra a:hover div.underline {
+      animation: animate-underline 2 .3s alternate ease-in-out; }
 
 div.pricing-apm {
   position: relative;
@@ -7293,8 +7339,18 @@ div.pricing-apm {
   margin-top: 3%;
   width: 90%;
   left: 1%; }
-  div.pricing-apm h6, div.pricing-apm a {
+  div.pricing-apm h6 {
     color: #14D071; }
+  div.pricing-apm a {
+    color: #14D071; }
+    div.pricing-apm a div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 100%;
+      background-color: #14D071; }
+    div.pricing-apm a:hover div.underline {
+      animation: animate-underline 2 .3s alternate ease-in-out; }
 
 div.pricing-logs {
   position: relative;
@@ -7302,12 +7358,24 @@ div.pricing-logs {
   margin-top: 3%;
   width: 90%;
   left: 1%; }
-  div.pricing-logs h6, div.pricing-logs a {
+  div.pricing-logs h6 {
     color: #FF635A; }
+  div.pricing-logs a {
+    color: #FF635A; }
+    div.pricing-logs a div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 100%;
+      background-color: #FF635A; }
+    div.pricing-logs a:hover div.underline {
+      animation: animate-underline 2 .3s alternate ease-in-out; }
 
 div.pricing a {
   position: absolute;
-  bottom: -16%; }
+  bottom: -16%;
+  text-decoration: none;
+  display: block; }
 
 div.pricing-divider {
   position: absolute;
@@ -7367,16 +7435,30 @@ div.carousel {
   padding-top: 2vw;
   padding-left: 2vw;
   box-shadow: 2px 2px 5px -2px #C7C7C7; }
-  div.carousel h6, div.carousel a {
+  div.carousel h6 {
     color: #724EEF; }
   div.carousel h3 {
     padding-top: .8vw;
     padding-bottom: .8vw; }
+  div.carousel a {
+    color: #724EEF;
+    text-decoration: none;
+    display: block;
+    position: absolute; }
+    div.carousel a div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 100%;
+      background-color: #724EEF; }
+    div.carousel a:hover div.underline {
+      animation: animate-underline 2 .3s alternate ease-in-out; }
 
 div.observability {
   width: 78%;
   padding-top: 3%;
-  padding-bottom: 3%; }
+  padding-bottom: 3%;
+  margin-top: 5%; }
 
 div.customers-column {
   position: relative;
@@ -7386,7 +7468,7 @@ div.customers-grid {
   box-shadow: 2px 2px 5px -2px #C7C7C7; }
 
 div.customers-copy {
-  padding-bottom: 26px; }
+  padding-bottom: 10%; }
 
 div.adroll-logo {
   margin-top: 8%;
@@ -7407,7 +7489,18 @@ div.customers {
     font-size: 14px;
     margin-top: 0px; }
   div.customers a {
-    color: #724EEF; }
+    color: #724EEF;
+    text-decoration: none;
+    display: block;
+    position: absolute; }
+    div.customers a div.underline {
+      height: 2px;
+      bottom: -2px;
+      position: relative;
+      width: 100%;
+      background-color: #724EEF; }
+    div.customers a:hover div.underline {
+      animation: animate-underline 2 .3s alternate ease-in-out; }
 
 div.customers > div.row {
   margin-right: 1vw;
@@ -7470,7 +7563,7 @@ footer {
     line-height: 19px;
     margin-top: 20%; }
   footer h4 {
-    font-family: National, sans-serif;
+    font-family: 'National', sans-serif;
     font-size: 16px;
     line-height: 10px;
     color: #B6B6B6; }
@@ -7495,12 +7588,12 @@ footer {
       text-align: center;
       margin-top: 15px; }
   footer p.terms {
-    font-family: National, sans-serif;
+    font-family: 'National', sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF; }
     footer p.terms a {
-      font-family: National, sans-serif;
+      font-family: 'National', sans-serif;
       font-size: 16px;
       line-height: 19px;
       color: #FFFFFF;
@@ -7511,7 +7604,7 @@ footer {
 
 footer li > a {
   color: #B6B6B6;
-  font-family: National, sans-serif;
+  font-family: 'National', sans-serif;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;

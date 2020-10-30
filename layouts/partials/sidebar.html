@@ -7,11 +7,16 @@
     </div>
     <div class="sidebar-navigation">
       {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
-          <a class="nav-link" href="/">
+          <div class="link-containers">
+            <a class="nav-link" href="/">
               {{ .Title }}
-          </a>
+              <div class="underline"></div>
+            </a>
+          </div>
       {{ end }}
     </div>
-    <a class="nav-link login" href="/">Login</a>
+    <div class="nav-link">
+      <a class="login" href="/">Login <div class="underline"></div></a>
+    </div>
   </div>
 
