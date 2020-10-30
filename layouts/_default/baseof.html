@@ -18,9 +18,11 @@
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+    <link href="./../../assets/css/national/custom.css" rel="stylesheet" type="text/css">
+
+
     <title>{{ .Site.Title }}</title>
   </head>
-
   <body>
     <div class="row">
       <div class="col-md-1">
@@ -31,10 +33,10 @@
 
         {{ end }}
     </div>
-    </div>
       <footer class="page-footer bottom">
         {{ partial "footer" . }}
 
       </footer>
+    </div>
   </body>
 </html>

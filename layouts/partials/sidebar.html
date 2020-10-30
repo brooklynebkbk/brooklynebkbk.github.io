@@ -1,6 +1,10 @@
 
   <div class="nav flex-column">
-    <div class="datadog-logo"></div>
+    <div class="datadog-logo md-image">
+      {{ range where .Site.Pages "Params.image" "datadog-logo" }}
+          {{ .Content }}
+      {{ end }}
+    </div>
     <div class="sidebar-navigation">
       {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
           <a class="nav-link" href="/">
@@ -8,6 +12,6 @@
           </a>
       {{ end }}
     </div>
-    <a class="nav-link" href="/">Login</a>
+    <a class="nav-link login" href="/">Login</a>
   </div>
 
