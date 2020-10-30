@@ -7395,7 +7395,7 @@ div.feature {
 div.feature > div {
   padding: 0px; }
 
-div.feature > div > div.feature-block {
+div.feature > div > a.feature-block {
   position: relative;
   height: 100%;
   margin-left: 1vw;
@@ -7404,55 +7404,85 @@ div.feature > div > div.feature-block {
   padding-left: 2vw;
   padding-right: 2vw; }
 
-div.feature-apm {
+a.feature-apm {
   margin-right: 1vw;
   background-color: #14D071;
   background-image: url(http://www.marketinghub.today/wp-content/uploads/2017/08/how-to-use-excel-and-google-sheets-to-organize-your-marketing-efforts.png);
   min-height: 100%;
   background-size: cover;
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  display: block;
+  text-decoration: none; }
+  a.feature-apm:hover {
+    filter: brightness(1.1);
+    transition: .2s; }
 
-div.feature-infra {
+a.feature-infra {
   background-color: #2B2AA7;
   background-image: url(http://www.marketinghub.today/wp-content/uploads/2017/08/how-to-use-excel-and-google-sheets-to-organize-your-marketing-efforts.png);
   min-height: 100%;
   background-size: cover;
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  display: block;
+  text-decoration: none; }
+  a.feature-infra:hover {
+    filter: brightness(1.1);
+    transition: .2s; }
 
-div.feature-logs {
+a.feature-logs {
   background-color: #FF635A;
   margin-right: 1vw;
   margin-top: 2vw;
   background-image: url(http://www.marketinghub.today/wp-content/uploads/2017/08/how-to-use-excel-and-google-sheets-to-organize-your-marketing-efforts.png);
   max-height: 22vw;
   background-size: cover;
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  display: block;
+  text-decoration: none; }
+  a.feature-logs:hover {
+    filter: brightness(1.1);
+    transition: .2s; }
 
-div.carousel {
+div.carousel-container {
   background-color: #F5F5F5;
   margin-top: 2vw;
   margin-left: 1vw;
   padding-top: 2vw;
   padding-left: 2vw;
   box-shadow: 2px 2px 5px -2px #C7C7C7; }
-  div.carousel h6 {
+  div.carousel-container h6 {
     color: #724EEF; }
-  div.carousel h3 {
+  div.carousel-container h3 {
     padding-top: .8vw;
     padding-bottom: .8vw; }
-  div.carousel a {
+  div.carousel-container a {
     color: #724EEF;
     text-decoration: none;
     display: block;
     position: absolute; }
-    div.carousel a div.underline {
+    div.carousel-container a div.underline {
       height: 2px;
       bottom: -2px;
       position: relative;
       width: 100%;
       background-color: #724EEF; }
-    div.carousel a:hover div.underline {
+    div.carousel-container a:hover div.underline {
       animation: animate-underline 2 .3s alternate ease-in-out; }
+
+a.carousel-control-next {
+  position: relative;
+  top: 18%;
+  right: 5%; }
+
+span.carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  background-image: none;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 0px;
+  border-left: 0px;
+  transform: rotate(45deg); }
 
 div.observability {
   width: 78%;

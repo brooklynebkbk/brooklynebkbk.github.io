@@ -283,7 +283,7 @@ div.feature {
 div.feature > div {
   padding: 0px;
 }
-div.feature > div > div.feature-block {
+div.feature > div > a.feature-block {
   position: relative;
   height: 100%;
   margin-left: 1vw;
@@ -292,22 +292,34 @@ div.feature > div > div.feature-block {
   padding-left: 2vw;
   padding-right: 2vw;
 }
-div.feature-apm {
+a.feature-apm {
   margin-right: 1vw;
   background-color: $green;
   background-image: $feature-bg;
   min-height: 100%;
   background-size: cover;
   background-blend-mode: multiply;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(1.1);
+    transition: .2s;
+  }
 }
-div.feature-infra {
+a.feature-infra {
   background-color: $purple;
   background-image: $feature-bg;
   min-height: 100%;
   background-size: cover;
   background-blend-mode: multiply;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(1.1);
+    transition: .2s;
+  }
 }
-div.feature-logs {
+a.feature-logs {
   background-color: $salmon;
   margin-right: 1vw;
   margin-top: 2vw;
@@ -315,8 +327,14 @@ div.feature-logs {
   max-height: 22vw;
   background-size: cover;
   background-blend-mode: multiply;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(1.1);
+    transition: .2s;
+  }
 }
-div.carousel {
+div.carousel-container {
   background-color: $light-gray;
   margin-top: 2vw;
   margin-left: 1vw;
@@ -346,6 +364,22 @@ div.carousel {
       animation: animate-underline 2 .3s alternate ease-in-out;
     }
   }
+}
+a.carousel-control-next {
+  position: relative;
+  top: 18%;
+  right: 5%;
+}
+span.carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  background-image: none;
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  border-bottom: 0px;
+  border-left: 0px;
+  transform: rotate(45deg);
+
 }
 div.observability {
   width: 78%;
