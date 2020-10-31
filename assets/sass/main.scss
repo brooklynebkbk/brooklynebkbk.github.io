@@ -81,14 +81,54 @@ img {
   height: 100%;
   width: 100%;
 }
+
+
+//navigation styling
+nav.nav button {
+  background-color: $dd-purple;
+  border-color: $white;
+  span {
+    display: block;
+    background-color: $white;
+    width: 36px;
+    height: 2px;
+    border-radius: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+}
+@include media-breakpoint-down(xl) {
+  nav.nav {
+    a.navbar-brand {
+      position: relative;
+      margin-left: -100%;
+    }
+    ul {
+      position: relative;
+      margin-top: 140px;
+      margin-left: -90%;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  nav.nav {
+    height: 100vh;
+    width: 190px;
+    a.navbar-brand {
+      position: absolute;
+      top: 0%;
+    }
+    ul {
+      position: relative;
+      margin-top: 10px;
+    }
+  }
+}
 nav.nav {
-  z-index:20;
   background-color: $dd-purple;
   position: sticky;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 190px;
 }
 div.navbar-collapse {
   display: flex;
@@ -138,11 +178,17 @@ img {
   height: 100%;
   width: 100%;
 }
+
+//spacing for page content
 div.page-content {
   margin-top: 2vw;
 }
+//header styling
 div.header {
-    input {
+  h3 {
+    padding-top: 4%;
+  }
+  input {
     border: 3px solid $dd-purple;
     box-sizing: border-box;
     position: absolute;
@@ -159,6 +205,7 @@ div.header {
     }
   }
 }
+//pricing styling
 div.pricing {
   background-color: $light-gray;
   padding-bottom: 10%;
@@ -254,6 +301,7 @@ div.pricing-divider {
   right: 1px;
   top: 0%;
 }
+//feature styling
 div.feature {
   position: relative;
   top: 2vw;
@@ -316,6 +364,7 @@ a.feature-logs {
     transition: .2s;
   }
 }
+//carousel styling
 div.carousel-container {
   background-color: $light-gray;
   margin-top: 2vw;
@@ -361,7 +410,6 @@ span.carousel-control-next-icon {
   border-bottom: 0px;
   border-left: 0px;
   transform: rotate(45deg);
-
 }
 div.observability {
   width: 78%;
@@ -387,7 +435,7 @@ div.adroll-logo {
 }
 div.customers {
   margin-left: 1vw;
-  margin-top: -26vw;
+  margin-top: -25vw;
   p:nth-child(3) {
     font-size: 14px;
     font-weight: 600;
@@ -416,6 +464,7 @@ div.customers {
     }
   }
 }
+//customers styling
 div.customers > div.row {
   margin-right: 1vw;
   background-color: $light-gray;
@@ -458,6 +507,7 @@ div.bottom-six {
   background: #00A8E0;
   padding-top: 10%;
 }
+//footer styling
 footer {
   background: linear-gradient(180deg, #443E48 0%, #110617 100%);
   position: relative;

@@ -7218,14 +7218,43 @@ img {
   height: 100%;
   width: 100%; }
 
+nav.nav button {
+  background-color: #724EEF;
+  border-color: #FFFFFF; }
+  nav.nav button span {
+    display: block;
+    background-color: #FFFFFF;
+    width: 36px;
+    height: 2px;
+    border-radius: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px; }
+
+nav.nav a.navbar-brand {
+  position: relative;
+  margin-left: -100%; }
+
+nav.nav ul {
+  position: relative;
+  margin-top: 140px;
+  margin-left: -90%; }
+
+@media (min-width: 1200px) {
+  nav.nav {
+    height: 100vh;
+    width: 190px; }
+    nav.nav a.navbar-brand {
+      position: absolute;
+      top: 0%; }
+    nav.nav ul {
+      position: relative;
+      margin-top: 10px; } }
+
 nav.nav {
-  z-index: 20;
   background-color: #724EEF;
   position: sticky;
   top: 0;
-  left: 0;
-  height: 100vh;
-  width: 190px; }
+  left: 0; }
 
 div.navbar-collapse {
   display: flex;
@@ -7274,6 +7303,9 @@ img {
 
 div.page-content {
   margin-top: 2vw; }
+
+div.header h3 {
+  padding-top: 4%; }
 
 div.header input {
   border: 3px solid #724EEF;
@@ -7494,7 +7526,7 @@ div.adroll-logo {
 
 div.customers {
   margin-left: 1vw;
-  margin-top: -26vw; }
+  margin-top: -25vw; }
   div.customers p:nth-child(3) {
     font-size: 14px;
     font-weight: 600;
