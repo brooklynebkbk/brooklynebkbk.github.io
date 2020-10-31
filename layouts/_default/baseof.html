@@ -27,18 +27,21 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-md-1">
-      {{ partial "sidebar" . }}
+      <div class="col-xl-1">
+        {{ partial "sidebar" . }}
       </div>
-    <div class="col-md-11">
-        {{ block "main" . }}
-
-        {{ end }}
+      <div class="col-xl-10 offset-xl-1 page-content">
+            {{ block "main" . }}
+            {{ end }}
+      </div>
     </div>
-      <footer class="page-footer bottom">
+    <footer class="page-footer bottom">
         {{ partial "footer" . }}
 
-      </footer>
-    </div>
+    </footer>
   </body>
 </html>
+
+
+
+

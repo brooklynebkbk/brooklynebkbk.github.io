@@ -1,22 +1,31 @@
 
-  <div class="nav flex-column">
-    <div class="datadog-logo md-image">
-      {{ range where .Site.Pages "Params.image" "datadog-logo" }}
-          {{ .Content }}
-      {{ end }}
-    </div>
-    <div class="sidebar-navigation">
+<nav class="navbar navbar-expand-xl nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <a class="navbar-brand" href="#">
+      <div class="datadog-logo md-image">
+        {{ range where .Site.Pages "Params.image" "datadog-logo" }}
+            {{ .Content }}
+        {{ end }}
+      </div>
+    </a>
+    <ul class="navbar-nav nav flex-column">
       {{ range (where .Site.Pages "Params.sidebar" true).ByDate }}
-          <div class="link-containers">
-            <a class="nav-link" href="/">
+          <li class="link-containers">
+            <a class="nav-link" href="#">
               {{ .Title }}
               <div class="underline"></div>
             </a>
-          </div>
+          </li>
       {{ end }}
-    </div>
-    <div class="nav-link">
-      <a class="login" href="/">Login <div class="underline"></div></a>
-    </div>
+      <li class="link-containers">
+        <a class="nav-link login" href="#">Login<div class="underline"></div></a>
+      </li>
+    </ul>
   </div>
+</nav>
+
+
 
