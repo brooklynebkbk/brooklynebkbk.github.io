@@ -1,11 +1,13 @@
-<div class="customers col-6">
+<div class="customers col-lg-6">
   <div class="customers-grid row lhs-grid">
-    <div class="customer-block col-md-4" id="air-bnb">
+    <div class="customer-block col-sm-4" id="air-bnb">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "air-bnb-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customers-copy col-md-8">
+    <div class="customers-copy col-sm-8">
       <div class="adroll-logo md-image">
           {{ range where .Site.Pages "Params.image" "adroll-logo" }}
               {{ .Content }}
@@ -18,44 +20,58 @@
       </p>
       <p>Valentino Volonghi</p>
       <p>Chief Technology Officer</p>
-      <a href="/">See More Stories<div class="underline"></div></a>
+      <a href="#">See More Stories<div class="underline"></div></a>
     </div>
-    <div class="customer-block col-md-4" id="peloton">
+    <div class="customer-block col-sm-4" id="peloton">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "peloton-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
   </div>
   <div class="customers-grid row bottom-six">
-    <div class="customer-block col-md-4" id="evernote">
+    <div class="customer-block col-sm-4" id="evernote">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "evernote-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customer-block col-md-4" id="samsung">
+    <div class="customer-block col-sm-4" id="samsung">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "samsung-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customer-block col-md-4" id="nginx">
+    <div class="customer-block col-sm-4" id="nginx">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "nginx-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customer-block col-md-4" id="paperduty">
+    <div class="customer-block col-sm-4" id="paperduty">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "paperduty-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customer-block col-md-4" id="whole-foods">
+    <div class="customer-block col-sm-4" id="whole-foods">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "whole-foods-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
-    <div class="customer-block col-md-4" id="att">
+    <div class="customer-block col-sm-4" id="att">
+      <div class="customer-logo">
           {{ range where .Site.Pages "Params.image" "att-logo" }}
               {{ .Content }}
           {{ end }}
+      </div>
     </div>
   </div>
 </div>

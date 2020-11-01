@@ -87,6 +87,7 @@ img {
 nav.nav button {
   background-color: $dd-purple;
   border-color: $white;
+  margin-right: 3%;
   span {
     display: block;
     background-color: $white;
@@ -97,20 +98,23 @@ nav.nav button {
     margin-bottom: 6px;
   }
 }
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(md) {
   nav.nav {
+  width: 100%;
     a.navbar-brand {
       position: relative;
-      margin-left: -100%;
+      margin-left: 10px;
+      margin-top: -20px;
+      height: 150px;
     }
     ul {
       position: relative;
-      margin-top: 140px;
-      margin-left: -90%;
+      margin-top: 10px;
+      left: -3%;
     }
   }
 }
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
   nav.nav {
     height: 100vh;
     width: 190px;
@@ -130,6 +134,19 @@ nav.nav {
   top: 0;
   left: 0;
 }
+@include media-breakpoint-down(md) {
+  div.navbar-collapse {
+    position: relative;
+    left: -44%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  div.navbar-collapse {
+    position: absolute;
+    top: 140px;
+    left: 24px;
+  }
+}
 div.navbar-collapse {
   display: flex;
   flex-direction: column;
@@ -137,8 +154,8 @@ div.navbar-collapse {
 ul.navbar-nav {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  margin-left: -80%;
+  position: relative;
+  left: 0px;
 }
 li.link-containers {
   margin-top: 10px;
@@ -170,7 +187,6 @@ div.datadog-logo {
   position: absolute;
   width: 110px;
   height: 97px;
-  left: 22px;
   top: 20px;
 }
 img {
@@ -180,13 +196,34 @@ img {
 }
 
 //spacing for page content
+@include media-breakpoint-down(md) {
+  div.page-content {
+    padding-left: 8%;
+  }
+}
+@include media-breakpoint-only(lg) {
+  div.page-content {
+    padding-left: 4%;
+  }
+}
 div.page-content {
   margin-top: 2vw;
 }
 //header styling
+@include media-breakpoint-down(md) {
+  div.header {
+    margin-bottom: 4%;
+    form {
+      max-width: 70%;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
 div.header {
   h3 {
     padding-top: 4%;
+    min-height: 200px;
   }
   input {
     border: 3px solid $dd-purple;
@@ -206,9 +243,25 @@ div.header {
   }
 }
 //pricing styling
-div.pricing {
-  background-color: $light-gray;
-  padding-bottom: 10%;
+@include media-breakpoint-down(sm) {
+  div.pricing {
+    background-color: $light-gray;
+    padding-bottom: 14%;
+    width: 90%;
+    margin-left: 4%;
+  }
+}
+@include media-breakpoint-only(md) {
+  div.pricing {
+    background-color: $light-gray;
+    padding-bottom: 12%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  div.pricing {
+    background-color: $light-gray;
+    padding-bottom: 10%;
+  }
 }
 @keyframes animate-underline {
   0% {
@@ -241,10 +294,18 @@ div.pricing-infra {
     }
   }
 }
+@include media-breakpoint-down(sm) {
+  div.pricing-apm {
+    margin-top: 26%;
+  }
+}
+@include media-breakpoint-up(sm) {
+  div.pricing-apm {
+    margin-top: 3%;
+  }
+}
 div.pricing-apm {
   position: relative;
-  width: 90%;
-  margin-top: 3%;
   width: 90%;
   left: 1%;
   h6 {
@@ -264,10 +325,23 @@ div.pricing-apm {
     }
   }
 }
+@include media-breakpoint-down(xs) {
+  div.pricing-logs {
+    margin-bottom: 10%;
+  }
+}
+@include media-breakpoint-down(sm) {
+  div.pricing-logs {
+    margin-top: 26%;
+  }
+}
+@include media-breakpoint-up(sm) {
+  div.pricing-logs {
+    margin-top: 3%;
+  }
+}
 div.pricing-logs {
   position: relative;
-  width: 90%;
-  margin-top: 3%;
   width: 90%;
   left: 1%;
   h6 {
@@ -293,15 +367,33 @@ div.pricing a {
   text-decoration: none;
   display: block;
 }
-div.pricing-divider {
-  position: absolute;
-  height: 116%;
-  width: 1px;
-  background-color: $shadow;
-  right: 1px;
-  top: 0%;
+@include media-breakpoint-down(sm) {
+  div.pricing-divider{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: $shadow;
+    bottom: -26%;
+  }
+}
+@include media-breakpoint-up(sm) {
+  div.pricing-divider{
+    position: absolute;
+    height: 116%;
+    width: 1px;
+    background-color: $shadow;
+    right: 1px;
+    top: 0%;
+  }
 }
 //feature styling
+@include media-breakpoint-down(sm) {
+  div.feature-container {
+    max-width: 90%;
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+}
 div.feature {
   position: relative;
   top: 2vw;
@@ -313,17 +405,30 @@ div.feature {
 div.feature > div {
   padding: 0px;
 }
-div.feature > div > a.feature-block {
+@include media-breakpoint-down(md) {
+  a.feature-block {
+    min-height: 165px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  a.feature-block {
+    height: 100%;
+    margin-left: 1vw;
+  }
+}
+a.feature-block {
   position: relative;
-  height: 100%;
-  margin-left: 1vw;
   padding-top: 7vw;
   padding-bottom: 6vw;
   padding-left: 2vw;
   padding-right: 2vw;
 }
+@include media-breakpoint-up(xl) {
+  a.feature-apm, a.feature-logs {
+    margin-right: 1vw;
+  }
+}
 a.feature-apm {
-  margin-right: 1vw;
   background-color: $green;
   background-image: $feature-bg;
   min-height: 100%;
@@ -334,6 +439,12 @@ a.feature-apm {
   &:hover {
     filter: brightness(1.1);
     transition: .2s;
+  }
+}
+@include media-breakpoint-down(md) {
+  a.feature-infra{
+    margin-top: 4%;
+    min-height: 165px;
   }
 }
 a.feature-infra {
@@ -349,12 +460,30 @@ a.feature-infra {
     transition: .2s;
   }
 }
+@include media-breakpoint-down(md) {
+  div.feature-row-2 {
+    margin-top: 6%;
+  }
+}
+@include media-breakpoint-down(md) {
+  a.feature-logs {
+    min-height: 165px;
+  }
+}
+@include media-breakpoint-only(lg) {
+  a.feature-logs {
+    max-height: 24vw;
+  }
+}
+@include media-breakpoint-only(xl) {
+  a.feature-logs {
+    max-height: 22vw;
+  }
+}
 a.feature-logs {
   background-color: $salmon;
-  margin-right: 1vw;
-  margin-top: 2vw;
   background-image: $feature-bg;
-  max-height: 22vw;
+  margin-top: 2vw;
   background-size: cover;
   background-blend-mode: multiply;
   display: block;
@@ -365,10 +494,19 @@ a.feature-logs {
   }
 }
 //carousel styling
+@include media-breakpoint-down(md) {
+  div.carousel-container {
+    margin-top: 5%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  div.carousel-container {
+    margin-top: 2vw;
+    margin-left: 1vw;
+  }
+}
 div.carousel-container {
   background-color: $light-gray;
-  margin-top: 2vw;
-  margin-left: 1vw;
   padding-top: 2vw;
   padding-left: 2vw;
   box-shadow: 2px 2px 5px -2px $shadow;
@@ -417,9 +555,38 @@ div.observability {
   padding-bottom: 3%;
   margin-top: 5%;
 }
+//customers styling
 div.customers-column {
   position: relative;
   top: 6vw;
+}
+@include media-breakpoint-down(sm) {
+  div.customers {
+    margin-top: 3%;
+    margin-left: 4%;
+    width: 90%;
+  }
+}
+@include media-breakpoint-only(md) {
+  div.customers {
+    margin-top: 3%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  div.customers {
+    margin-left: 1vw;
+    margin-top: -300px;
+  }
+}
+@include media-breakpoint-only(lg) {
+  div.customers-grid {
+    margin-right: 1vw;
+  }
+}
+@include media-breakpoint-up(xl) {
+  div.customers-grid {
+    margin-right: 1vw;
+  }
 }
 div.customers-grid {
   box-shadow: 2px 2px 5px -2px $shadow;
@@ -434,8 +601,6 @@ div.adroll-logo {
   margin-left: -10px;
 }
 div.customers {
-  margin-left: 1vw;
-  margin-top: -25vw;
   p:nth-child(3) {
     font-size: 14px;
     font-weight: 600;
@@ -464,25 +629,61 @@ div.customers {
     }
   }
 }
-//customers styling
-div.customers > div.row {
-  margin-right: 1vw;
-  background-color: $light-gray;
+@include media-breakpoint-up(lg) {
+  div.customer-block {
+    height: 194px;
+  }
 }
-div.customers > div > div{
+@include media-breakpoint-down(xs) {
+  div#peloton {
+    top: 0%;
+  }
 }
-div.customer-block {
-  height: 180px;
+@include media-breakpoint-between(sm, md) {
+  div#peloton {
+    top: -180px;
+    position: relative;
+  }
 }
-div#peloton {
-  top: -180px;
+@include media-breakpoint-up(lg) {
+  div#peloton {
+    top: -194px;
+    position: relative;
+  }
 }
-div.customer-block {
-  padding-top: 8%;
+@include media-breakpoint-down(xs) {
+  div.customer-logo {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
 }
-div.bottom-six {
-  position: relative;
-  top: -180px;
+@include media-breakpoint-up(sm) {
+  div.customer-logo {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 58px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  div.bottom-six {
+    top: 0%;
+    margin-bottom: 30%;
+  }
+}
+@include media-breakpoint-between(sm, md) {
+  div.bottom-six {
+    position: relative;
+    top: -180px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  div.bottom-six {
+    position: relative;
+    top: -194px;
+  }
 }
 #air-bnb {
   background: #FF5A5F;
@@ -501,11 +702,11 @@ div.bottom-six {
 }
 #nginx {
   background: #00AA4E;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 #att {
   background: #00A8E0;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 //footer styling
 footer {
