@@ -1,7 +1,13 @@
-baseURL = "http://datadog-static-site.s3-website-us-east-1.amazonaws.com/"
+##baseURL = "http://datadog-static-site.s3-website-us-east-1.amazonaws.com/"
+##languageCode = "en-us"
+##title = "Datadog Websites Team Homepage Redesign"
+
+
+##[[deployment.targets]]
+##URL = "s3://datadog-static-site?region=us-east-1"
+
+
+
+baseURL = "https://brooklynebkbk.github.io/"
 languageCode = "en-us"
 title = "Datadog Websites Team Homepage Redesign"
-
-
-[[deployment.targets]]
-URL = "s3://datadog-static-site?region=us-east-1"
