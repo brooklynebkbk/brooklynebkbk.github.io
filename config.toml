@@ -1,6 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "http://datadog-static-site.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-us"
 title = "Datadog Websites Team Homepage Redesign"
 
 
-
+[[deployment.targets]]
+URL = "s3://datadog-static-site?region=us-east-1"
